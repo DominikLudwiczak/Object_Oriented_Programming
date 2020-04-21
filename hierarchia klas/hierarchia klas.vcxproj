@@ -123,6 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gromada.cpp" />
+    <ClCompile Include="krolestwo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="rzad.cpp" />
+    <ClCompile Include="typ.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gromada.h" />
+    <ClInclude Include="krolestwo.h" />
+    <ClInclude Include="rzad.h" />
+    <ClInclude Include="typ.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
