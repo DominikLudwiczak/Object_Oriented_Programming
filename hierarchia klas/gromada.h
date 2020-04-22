@@ -1,20 +1,22 @@
 #pragma once
 #include "typ.h"
+#include <iostream>
+using namespace std;
 class gromada : typ
 {
-	unsigned char nazwa_gromady;
+	string nazwa_gromady;
 
 public:
 	//konstruktory
-	gromada(unsigned char _nazwa_gromady, unsigned char _nazwa_typu, unsigned char _nazwa_krolestwa) : typ(_nazwa_typu, _nazwa_krolestwa)
+	gromada(string _nazwa_gromady, string _nazwa_typu, string _nazwa_krolestwa) : typ(_nazwa_typu, _nazwa_krolestwa)
 	{
 		nazwa_gromady = _nazwa_gromady;
 	}
 
 	//settery
-	void setNazwaGromady(unsigned char _nazwa_gromady);
+	void setNazwaGromady(string _nazwa_gromady);
 
 	//gettery
-	unsigned char getNazwaGromady();
+	string getNazwaGromady();
 };
 

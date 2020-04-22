@@ -1,12 +1,12 @@
 #include "typ.h"
 //settery
-void typ::setNazwaTypu(unsigned char _nazwa_typu)
+void typ::setNazwaTypu(string _nazwa_typu)
 {
 	nazwa_typu = _nazwa_typu;
 }
 
 //gettery
-unsigned char typ::getNazwaTypu()
+string typ::getNazwaTypu()
 {
 	return nazwa_typu;
 }

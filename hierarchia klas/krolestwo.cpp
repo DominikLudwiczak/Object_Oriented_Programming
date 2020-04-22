@@ -1,12 +1,12 @@
 #include "krolestwo.h"
 //settery
-void krolestwo::setNazwaKrolestwa(unsigned char _nazwa_krolestwa)
+void krolestwo::setNazwaKrolestwa(string _nazwa_krolestwa)
 {
 	nazwa_krolestwa = _nazwa_krolestwa;
 }
 
 //gettery
-unsigned char krolestwo::getNazwaKrolestwa()
+string krolestwo::getNazwaKrolestwa()
 {
 	return nazwa_krolestwa;
 }
