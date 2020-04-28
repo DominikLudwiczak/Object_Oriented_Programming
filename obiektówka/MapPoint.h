@@ -28,6 +28,4 @@ public:
 	//gettery
 	int getVisRadius();
 	RGBA getVisColor();
-
-	
 };

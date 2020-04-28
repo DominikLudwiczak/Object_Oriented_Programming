@@ -2,11 +2,13 @@
 #include <iostream>
 using namespace std;
 
-class krolestwo
+class krolestwo : public zwierze
 {
 	string nazwa_krolestwa;
 public:
 	//kontsruktory
+	krolestwo() = default;
+
 	krolestwo(string _nazwa_krolestwa)
 	{
 		nazwa_krolestwa = _nazwa_krolestwa;

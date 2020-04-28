@@ -6,10 +6,17 @@ using namespace std;
 
 int main()
 {
-	Kot kot=Kot("rzad_kot","gromada_kot","typ_kot","krolestwo_kot");
-	Pies pies = Pies("rzad", "gromada", "typ", "krolestwo");
+	string* potomstwoKot = new string[2];
+	potomstwoKot[0] = "Bonifacy";
+	potomstwoKot[1] = "Ciapek";
+	Kot kot = Kot("rzad_kot","gromada_kot","typ_kot","krolestwo_kot", potomstwoKot);
 
-	zwierze* zwierze;
-	zwierze = &kot;
+	string* potomstwoPies = new string[2];
+	potomstwoPies[0] = "Burek";
+	potomstwoPies[1] = "Kundelek";
+	Pies pies = Pies("rzad", "gromada", "typ", "krolestwo", potomstwoPies);
+
+	zwierze* zwierze = &pies;
+	zwierze->zwierze::getOgon();
 	return 0;
 }
