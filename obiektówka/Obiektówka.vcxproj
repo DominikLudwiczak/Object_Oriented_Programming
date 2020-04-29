@@ -136,6 +136,7 @@
     <ClInclude Include="MapPoint.h" />
     <ClInclude Include="MapPolygon.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MyException.h" />
     <ClInclude Include="polygon.h" />
     <ClInclude Include="Punkt2.h" />
     <ClInclude Include="RGBA.h" />

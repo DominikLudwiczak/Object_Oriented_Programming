@@ -17,16 +17,27 @@ unsigned int polygon::counter;
 
 double polygon::GetTriangleArea(Punkt2 p1, Punkt2 p2, Punkt2 p3)
 {
-	double AB[2];
-	AB[0] = p1.getX() - p2.getX();
-	AB[1] = p1.getY() - p2.getY();
+	try
+	{
+		double AB[2];
+		AB[0] = p1.getX() - p2.getX();
+		AB[1] = p1.getY() - p2.getY();
 
-	double AC[2];
-	AC[0] = p1.getX() - p3.getX();
-	AC[1] = p1.getY() - p3.getY();
+		double AC[2];
+		AC[0] = p1.getX() - p3.getX();
+		AC[1] = p1.getY() - p3.getY();
 
-	double d = AB[0] * AC[1] - AB[1] * AC[0];
-	return 0.5 * abs(d);
+		double d = AB[0] * AC[1] - AB[1] * AC[0];
+		double area = 0.5 * abs(d);
+		if (area <= 0)
+			throw "Pole nie moze byc mniejsze lub rowne 0";
+		else
+			return area;
+	}
+	catch (std::string e)
+	{
+		std::cout << e << std::endl;
+	}
 }
 
 void polygon::setVertices(Punkt2* _vertices, int _count)
@@ -40,14 +51,14 @@ void polygon::changeVertex(int i, double x, double y)
 	try
 	{
 		Punkt2 change = Punkt2(x, y);
-		if(vertices[i])
+		if (&vertices[i] != NULL)
 			vertices[i] = change;
 		else
-			throw 
+			throw MyException("Brak takiego wierzcholka", 007);
 	}
-	catch (exception e)
+	catch (const MyException& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << "\nerr_num: " << e.getErrNum() << std::endl;
 	}
 }
 

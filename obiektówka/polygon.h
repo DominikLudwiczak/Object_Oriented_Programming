@@ -14,11 +14,11 @@
 #pragma once
 
 #include "Punkt2.h"
-#include <exception>
 #include <cmath>
 #include <vector>
+#include "MyException.h"
 
-class polygon : virtual public std::exception
+class polygon
 {
 	unsigned int count; /*!< Iloœæ wierzcho³ków wielok¹ta */
 
@@ -84,11 +84,6 @@ class polygon : virtual public std::exception
 		~polygon()/*destruktor*/
 		{
 			delete vertices;
-		}
-
-		virtual const char* what() const noexcept override
-		{
-			return "wyjatek z klasy polygon";
 		}
 
 		//! Metoda konstruuj¹ca tablicê wierzcho³ków.

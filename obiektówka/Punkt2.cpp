@@ -37,28 +37,42 @@ double Punkt2::getY() const
 
 double Punkt2::getRadius()
 {
-	return sqrt(x * x + y * y);
+	try
+	{
+		double liczba = x * x + y * y;
+		if (liczba < 0)
+			throw MyException("Nie ma pierwiastka z liczby ujemnej", 001);
+		else
+			return sqrt(x * x + y * y);
+	}
+	catch (MyException& e)
+	{
+		std::cout << e.what() << "\nerr_num: " << e.getErrNum() << std::endl;
+	}
 }
 
 double Punkt2::getAngle()
 {
-	try
-	{
-		double Angle = atan2(x, y) * 180 / 3.14;
-		return Angle;
-	}
-	catch (exception e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+		return atan2(x, y) * 180 / 3.14;
 }
 
 double Punkt2::getDistance(Punkt2 _p)
 {
-	double x2 = _p.getX();
-	double y2 = _p.getY();
+	try
+	{
+		double x2 = _p.getX();
+		double y2 = _p.getY();
 
-	return sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
+		double liczba = (x - x2) * (x - x2) + (y - y2) * (y - y2);
+		if (liczba < 0)
+			throw "Nie ma pierwiastka z liczby ujemnej!";
+		else
+			return sqrt(liczba);
+	}
+	catch (std::string e)
+	{
+		std::cout << e << std::endl;
+	}
 }
 
 Punkt2 Punkt2::operator-(const Punkt2 &p2) const
