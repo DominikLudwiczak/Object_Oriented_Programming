@@ -13,7 +13,8 @@
 
 #pragma once
 #include <iostream>
-class Punkt2
+#include <exception>
+class Punkt2 : virtual public std::exception
 {
 	double x{ 0.0 };
 	double y{ 0.0 };

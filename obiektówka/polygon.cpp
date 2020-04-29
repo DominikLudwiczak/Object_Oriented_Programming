@@ -37,8 +37,18 @@ void polygon::setVertices(Punkt2* _vertices, int _count)
 
 void polygon::changeVertex(int i, double x, double y)
 {
-	Punkt2 change = Punkt2(x, y);
-	vertices[i] = change;
+	try
+	{
+		Punkt2 change = Punkt2(x, y);
+		if(vertices[i])
+			vertices[i] = change;
+		else
+			throw 
+	}
+	catch (exception e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }
 
 void polygon::setCount(int n)

@@ -42,8 +42,15 @@ double Punkt2::getRadius()
 
 double Punkt2::getAngle()
 {
-
-	return atan2(x, y) * 180 / 3.14;
+	try
+	{
+		double Angle = atan2(x, y) * 180 / 3.14;
+		return Angle;
+	}
+	catch (exception e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }
 
 double Punkt2::getDistance(Punkt2 _p)
