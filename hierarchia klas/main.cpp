@@ -17,6 +17,10 @@ int main()
 	Pies pies = Pies("rzad", "gromada", "typ", "krolestwo", potomstwoPies);
 
 	zwierze* zwierze = &pies;
-	zwierze->zwierze::getOgon();
+	bool ogon = zwierze->getOgon();
+	if (ogon == true)
+		cout << "Ma ogon" << endl;
+	else
+		cout << "Nie ma ogonu" << endl;
 	return 0;
 }

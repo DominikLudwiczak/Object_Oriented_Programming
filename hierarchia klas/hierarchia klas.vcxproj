@@ -130,7 +130,6 @@
     <ClCompile Include="Pies.cpp" />
     <ClCompile Include="rzad.cpp" />
     <ClCompile Include="typ.cpp" />
-    <ClCompile Include="zwierze.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gromada.h" />

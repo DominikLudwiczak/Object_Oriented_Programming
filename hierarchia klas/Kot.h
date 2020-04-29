@@ -21,6 +21,9 @@ public:
 		potomstwo = _potomstwo;
 	}
 
+	//destruktor
+	~Kot() {};
+
 	//gettery
 	virtual string getPokrycie();
 	virtual bool getOgon();

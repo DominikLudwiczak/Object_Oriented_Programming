@@ -1,4 +1,5 @@
 #pragma once
+#include "zwierze.h"
 #include <iostream>
 using namespace std;
 
@@ -13,6 +14,9 @@ public:
 	{
 		nazwa_krolestwa = _nazwa_krolestwa;
 	}
+
+	//destruktor
+	~krolestwo() {};
 
 	//settery
 	void setNazwaKrolestwa(string _nazwa_krolestwa);

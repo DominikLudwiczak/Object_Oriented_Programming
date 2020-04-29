@@ -15,6 +15,9 @@ public:
 		nazwa_gromady = _nazwa_gromady;
 	}
 
+	//destruktor
+	~gromada() {};
+
 	//settery
 	void setNazwaGromady(string _nazwa_gromady);
 

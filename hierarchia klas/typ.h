@@ -15,6 +15,9 @@ public:
 		nazwa_typu = _nazwa_typu;
 	}
 
+	//destruktor
+	~typ() {};
+
 	//settery
 	void setNazwaTypu(string _nazwa_typu);
 

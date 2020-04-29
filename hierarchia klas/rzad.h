@@ -15,6 +15,9 @@ public:
 		nazwa_rzedu = _nazwa_rzadu;
 	}
 
+	//destruktor
+	~rzad() {};
+
 	//settery
 	void setNazwaRzedu(string _nazwa_rzedu);
 
