@@ -26,7 +26,7 @@ public:
 		opacity = 255;
 	}
 
-	MapPolygon(const MapPolygon& obj) : polygon()/*konstruktor kopiuj¹cy*/
+	MapPolygon(const MapPolygon& obj, const polygon& copy) : polygon(copy)/*konstruktor kopiuj¹cy*/
 	{
 		borderWidth = obj.borderWidth;
 		borderColor = obj.borderColor;
@@ -34,10 +34,12 @@ public:
 		opacity = obj.opacity;
 	}
 
-	MapPolygon(int _borderWidth, int _opacity) : polygon()/*konstruktor z parametrem std::initializer_list*/
+	MapPolygon(int _borderWidth, int _opacity, RGBA& _borderColor, RGBA& _fillColor, const std::initializer_list<std::initializer_list<double>>& punkty) : polygon(punkty)/*konstruktor z parametrem std::initializer_list*/
 	{
 		borderWidth = _borderWidth;
 		opacity = _opacity;
+		borderColor = _borderColor;
+		fillColor = _fillColor;
 	}
 
 	~MapPolygon()/*destruktor*/
